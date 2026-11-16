@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <PublishReadyToRun>false</PublishReadyToRun>
+        <TieredCompilation>false</TieredCompilation>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <ApplicationIcon>../Chip8.Core/Content/Icon.ico</ApplicationIcon>
+        <AssemblyName>Chip8</AssemblyName>
+    </PropertyGroup>
+    <ItemGroup>
+        <MonoGameContentReference Include="..\Chip8.Core\Content\Chip8.mgcb">
+            <Link>Content\Chip8.mgcb</Link>
+        </MonoGameContentReference>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Chip8.Core\Chip8.Core.csproj"/>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.*"/>
+        <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.*"/>
+    </ItemGroup>
+</Project>
